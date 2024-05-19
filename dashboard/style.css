@@ -1,0 +1,117 @@
+/* Apply styles to the body */
+body {
+    margin: 0; /* Remove default body margin */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Apply styles to the container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw; /* Take up full viewport width */
+    height: 100vh; /* Take up full viewport height */
+    overflow: hidden; /* Hide content overflow */
+}
+
+/* Apply styles to the left and right sides */
+.left-side, .right-side {
+    flex: 1; /* Take up full width by default */
+    overflow: hidden; /* Hide content overflow */
+}
+
+/* For screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+    .left-side img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .left-side, .right-side {
+        flex: 100%;
+        height: 100%;
+    }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 769px) {
+    .left-side {
+        flex: 0 0 max-content; /* Set the left side to take the image's width */
+        max-width: 100%; /* Limit the width to 100% of the container */
+    }
+    .right-side {
+        flex: 1; /* Take the remaining space */
+        display: flex; /* Use flexbox */
+        justify-content:space-around; /* Center the content horizontally */
+
+    }
+    .left-side img {
+        height: 100vh; /* Adjust the height for larger displays */
+        width: auto;
+    }
+}
+
+/* Styles for the login form */
+.alignCenter {
+    text-align: center;
+}
+
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form button {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+}
+
+.login-form button {
+    background-color: #0b2a4b; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 170px;
+    
+}
+
+h1{
+    font-size: 50px;
+    padding-top: 20px;
+    color: dimgray;
+}
+
+p{
+    font-size: 25px;
+    color: dimgray;
+    padding-left: 10px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 15px;
+    color: gray; /* Label color */
+    font-size: 20px;
+}
+
+button{
+    padding-left: 10px;
+}
+
+label{
+    padding-top: 10px;
+}
+
+a{
+   
+    font-size: 17px;
+}
+
+.sign-up{
+    margin-top: 10px;
+}
+
